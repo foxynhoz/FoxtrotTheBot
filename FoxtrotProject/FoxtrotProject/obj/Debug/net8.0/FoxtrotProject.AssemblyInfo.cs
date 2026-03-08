@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FoxtrotProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbe9b367f5d7b9be01098dac7a4df8c3c82b9591")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a0467510b5479435da67e2895a682e4b6afa1cc2")]
 [assembly: System.Reflection.AssemblyProductAttribute("FoxtrotProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FoxtrotProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
