@@ -8,19 +8,12 @@ using Telegram.Bot.Types.Enums;
 Env.Load("../../../.env");
 
 string token = Environment.GetEnvironmentVariable("TELEGRAM_TOKEN");
-
 using var cts = new CancellationTokenSource();
-
 var bot = new TelegramBotClient(token); //The bot itself
+
 var me = await bot.GetMe();
-Console.WriteLine($"Bot conectado: @{me.Username}");
-
+ConsoleTXT();
 bot.OnMessage += OnMessage;
-
-Console.WriteLine($"@{me.Username} is running... Press Enter to terminate");
-Console.ReadLine();
-
-cts.Cancel(); // stop the bot
 
 // method that handle messages received by the bot:
 async Task OnMessage(Message msg, UpdateType type)
@@ -56,11 +49,18 @@ async Task OnMessage(Message msg, UpdateType type)
         }
     }
     
-
+    
     //if (msg.Text is "Amongus") Console.WriteLine("Sifude");	// we only handle Text messages here
     //Console.WriteLine($"Received {type} '{msg.Text}' in {msg.Chat}");
     // let's echo back received text in the chat
 
     //await bot.SendMessage(msg.Chat, $"{msg.From} said: {msg.Text}");
+}
+void ConsoleTXT()
+{
+    Console.WriteLine($"Bot conectado: @{me.Username}");
+    Console.WriteLine($"@{me.Username} is running... Press Enter to terminate");
+    Console.ReadLine();
+    cts.Cancel();
 }
 
